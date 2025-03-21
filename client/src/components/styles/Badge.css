@@ -1,0 +1,25 @@
+.badge-container {
+    width: 250px;
+    background-color: #93A3BC;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.badge-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.badge-name {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.badge-age {
+    font-size: 1rem;
+    color: #555;
+}
