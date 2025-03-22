@@ -15,7 +15,12 @@ app.use(express.json()); // parse json bodies
 app.use('/api/people', personRouter);
 
 //server static files (uploads) for image access
-app.use('/uploads', express.static(path.join(path.dirname(import.meta.url), 'uploads')));
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 //MongoDB connection
 
