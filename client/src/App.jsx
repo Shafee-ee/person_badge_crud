@@ -27,7 +27,8 @@ function App() {
     <div>
       <h1>People Badges</h1>
       <button onClick={() => setIsModalOpen(true)}>Add person</button>
-      <AddPersonModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <AddPersonModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}
+        onPersonAdded={(newPerson) => setPeople([...people, newPerson])} />
       <div className="badge-list">
         {people.map((person) => (
           <Badge key={person._id} name={person.name} age={person.age} image={person.image} />
