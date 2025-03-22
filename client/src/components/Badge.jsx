@@ -8,7 +8,7 @@ import "./styles/Badge.css";
 const Badge = ({ name, age, image }) => {
     return (
         <div className="badge-container">
-            <img src={`http://localhost:5000/${image}`} alt="{name}" className="Bade-image" />
+            <img src={`http://localhost:5000/${image}`} alt="{name}" className="Badge-image" />
 
             <h2 className="badge-name">{name}</h2>
             <p className="badge-age">Age:{age}</p>
