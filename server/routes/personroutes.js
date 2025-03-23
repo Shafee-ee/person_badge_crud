@@ -35,8 +35,10 @@ router.get('/', async (req, res) => {
 
 router.post('/', upload.single('image'), async (req, res) => {
 
-    console.log(req.body);
-    console.log(req.file);
+    console.log("Reacived Data:", req.body);
+    console.log("Received file:", req.file);
+
+
     const { name, age } = req.body;
     const image = req.file ? req.file.path : null;
 

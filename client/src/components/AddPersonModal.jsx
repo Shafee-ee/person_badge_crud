@@ -23,8 +23,6 @@ const AddPersonModal = ({ isOpen, onClose }) => {
             formData.append("image", image);
         }
 
-
-
         //send data fot backend
         const newPerson = await createPerson(formData);
         if (newPerson) {
@@ -37,15 +35,25 @@ const AddPersonModal = ({ isOpen, onClose }) => {
         <div className="modal-overlay">
             <div className="modal-content">
                 <h2>Add a New Person</h2>
-                <form>
+                <form onSubmit={handleSubmit}>
                     <label>Name:</label>
-                    <input type="text" name="name" required />
+                    <input type="text"
+                        name="name"
+                        onChange={(e) => setName(e.target.value)}
+                        required />
 
                     <label>Age:</label>
-                    <input type="number" name="Age" required />
+                    <input type="number"
+                        name="Age"
+                        onChange={(e) => setAge(e.target.value)}
+                        required />
 
                     <label>Upload Image:</label>
-                    <input type="file" name="image" accept="image/*" />
+                    <input type="file"
+                        name="image"
+                        accept="image/*"
+                        onChange={(e) => { e.target.value }}
+                    />
 
                     <button type="submit" className="add-button">Add person</button>
                 </form>
