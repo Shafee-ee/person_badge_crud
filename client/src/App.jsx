@@ -7,7 +7,8 @@ import './App.css'
 function App() {
   //state to store the List of people
   const [people, setPeople] = useState([]);
-  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [toggleBadge, setToggelBadge] = useState(false);
 
 
   useEffect(() => {
@@ -21,6 +22,10 @@ function App() {
     getPeople();
 
   }, [])
+
+  const handleToggleDeleteMode = () => {
+    setToggelBadge(prev => !prev);
+  };
 
 
   return (
