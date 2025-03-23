@@ -59,3 +59,15 @@ add-button:hover {
 .close-button:hover {
     background: firebrick;
 }
+
+.loading-message {
+    font-size: 18px;
+    color: blue;
+    text-align: center;
+}
+
+.success-message {
+    font-size: 18px;
+    color: green;
+    text-align: center;
+}
