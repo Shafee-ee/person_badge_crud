@@ -1,20 +1,23 @@
 .badge-container {
-
-    width: 250px;
-    background-color: #93A3BC;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    display: inline-block;
     text-align: center;
+    width: 250px;
+    height: auto;
+    background-color: #93a3bc80;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
 }
 
 .Badge-image {
-    width: 100%;
-    max-width: 150px;
+    width: 100px;
+    max-width: 100px;
     object-fit: cover;
-    height: auto;
     border-radius: 100px;
-    border: 5px solid #ccc;
+    border: 5px solid #e0e40e6d;
+    margin-bottom: 10px;
 }
 
 .badge-name {
@@ -25,4 +28,67 @@
 .badge-age {
     font-size: 1rem;
     color: #555;
+}
+
+/* add shaking animation */
+
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(3deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(-3eg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.shaking {
+    animation: shake 0.5s infinite;
+}
+
+
+/*Delete button*/
+.delete-button {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/*Making sure the badge container is positioned relative */
+.badge-container {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.delete-button {
+    background-color: rgba(195, 255, 192, 0.8);
+    width: auto;
+    height: auto;
+    border-radius: 0;
+}
+
+.delete-button:hover {
+    background-color: rgba(195, 255, 192, 1);
+
 }

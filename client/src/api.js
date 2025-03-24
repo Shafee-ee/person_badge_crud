@@ -31,3 +31,15 @@ export const createPerson = async (personData) => {
         console.error("Error creating person:", error);
     }
 };
+
+//function to delete a person from the backend
+
+export const deletePerson = async (id) => {
+    try {
+        const response = await axios.delete(`${API_URL}/api/people/${id}`);
+        return response.data;
+    }
+    catch (error) {
+        console.error("Error deleting person:", error)
+    }
+};
